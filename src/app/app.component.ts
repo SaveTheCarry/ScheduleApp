@@ -19,15 +19,7 @@ export class AppComponent {
     console.log(this.title, "else YO")
   }   
   
-}
-
-
-
-
-}
-
- 
-
+};
 }
 
 

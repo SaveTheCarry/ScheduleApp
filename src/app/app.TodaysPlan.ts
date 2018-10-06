@@ -22,5 +22,5 @@ export class TodaysPLan {
     new Worker(2, 'John'), 
     
   ];
+};
 
-  
