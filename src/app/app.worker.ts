@@ -9,7 +9,9 @@ import { IfStmt } from '@angular/compiler';
 export class Worker {
     constructor(
         public id: number,
-        public name: string) { }
+        public name: string,
+        public workingHours[]: number,
+        public assignedHours:  ) { }
 
         
 }
