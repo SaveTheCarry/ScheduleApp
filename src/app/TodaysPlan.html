@@ -43,7 +43,7 @@
               <h1 class="featurette-heading">{{currentMonth}}/{{currentDay}} Daily Schedule</h1>
               <h2 style="margin-top: 0%" class="featurette-heading">{{WorkAres[0]}}</h2>
               <ul>
-                    <li *ngFor="let Worker of Kitchen">{{Worker.name}}: {{Worker.workingHours}}</li>
+                    <li *ngFor="let Worker of Kitchen">{{Worker.name}}: {{Worker.startingHour}}-{{Worker.EndingHour}}</li>
               </ul>
             </div>
             <div class="col-md-5">

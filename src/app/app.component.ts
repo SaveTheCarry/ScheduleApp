@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Worker } from './app.workers';
+
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,9 @@ export class AppComponent {
     console.log(this.title, "else YO")
   }   
   
-};
+}
+
+
 }
 
 
