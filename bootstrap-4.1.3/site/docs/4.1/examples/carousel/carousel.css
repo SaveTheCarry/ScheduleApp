@@ -12,7 +12,13 @@ body {
   margin-top: 45px;
 }
 
+.hidden {
+  display: none;
+}
 
+.notHidden{
+  display: inherit;
+}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 

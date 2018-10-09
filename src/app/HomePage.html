@@ -3,46 +3,50 @@
 
 
 <html lang="en">
-  <body>
-    <div class="container" >
-      <div class="row">
-        <div class="col-4" id="BorderCol" ></div>
-        <div class="col" id="LoginBox">
-         <div class="card" style="border-color: #9ac2e8; padding: 20px; border-radius: 10px;" >
-          <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="Userlogin" style="border-color: #9ac2e8" >Username</span>
-                <br>
-              </div>
-              <input type="text" class="form-control" style="border-color: #9ac2e8"  aria-label="Username" aria-describedby="basic-addon1">
-              <div class="input-group mb-3" style="margin-top: 1rem;">
+  <body style="background-color: gainsboro">
+    <div id="loginBoxHidden" class="hidden">
+      <div id="loginContainer"    class="container">
+        <div class="row">
+          <div class="col-4" id="BorderCol" ></div>
+          <div  class="col" id="LoginBox">
+          <div class="card" style="border-color: #9ac2e8; padding: 20px; border-radius: 10px;" >
+            <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="PasswordLogin" style="border-color: #9ac2e8; width: 97px"  >Password </span>
+                  <span class="input-group-text" id="Userlogin" style="border-color: #9ac2e8" >Username</span>
+                  <br>
                 </div>
                 <input type="text" class="form-control" style="border-color: #9ac2e8"  aria-label="Username" aria-describedby="basic-addon1">
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="CompanyLogin" style="border-color: #9ac2e8" >Company Name</span>
+                <div class="input-group mb-3" style="margin-top: 1rem;">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="PasswordLogin" style="border-color: #9ac2e8; width: 97px"  >Password </span>
+                  </div>
+                  <input type="text" class="form-control" style="border-color: #9ac2e8"  aria-label="Username" aria-describedby="basic-addon1">
                 </div>
-                <input type="text" class="form-control" style="border-color: #9ac2e8" aria-label="Username" aria-describedby="basic-addon1">
-              </div>
-              <div class="btn-group" role="group" aria-label="Basic example" style="margin: auto" >
-                <button type="button" class="btn btn-outline-primary" style="margin: auto" >Sign In</button>
-                <br><button type="button" class="btn btn-outline-primary" style="margin: auto" >Forgot Password?</button>
-                <button type="button" class="btn btn-outline-primary" style="margin: auto" style="margin-left: auto;margin-right: auto;margin-top: auto;" >Sign Up</button>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="CompanyLogin" style="border-color: #9ac2e8" >Company Name</span>
+                  </div>
+                  <input type="text" class="form-control" style="border-color: #9ac2e8" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="btn-group" role="group" aria-label="Basic example" style="margin: auto" >
+                  <button type="button" (click)="titleSwitch(loginV)"  class="btn btn-outline-primary" style="margin: auto" >Sign In</button>
+                  <br><button type="button" class="btn btn-outline-primary" style="margin: auto" >Forgot Password?</button>
+                  <button type="button" class="btn btn-outline-primary" style="margin: auto" style="margin-left: auto;margin-right: auto;margin-top: auto;" >Sign Up</button>
+                </div>
               </div>
             </div>
           </div>
+          <div class="col-4"></div> 
         </div>
-        <div class="col-4"></div> 
       </div>
+      
     </div>
-    <main style="visibility: hidden" role="main">
+    
+    <main class="hidden" id="mainPage" role="main">
 
       <router-outlet></router-outlet>
-
-      <div class="container marketing">
+      
+      <div style="margin-top: 15px;" class="container marketing">
 
        
         <div class="row">
@@ -66,16 +70,17 @@
           </div>
         </div>
       </div>
+      <button (click)="titleSwitch(loginV)" class="btn btn-outline-success my-2 my-sm-0">Back to Log In</button>
     </main>
 
    
   
 
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg></body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
- 
+    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>
 
 

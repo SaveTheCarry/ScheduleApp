@@ -7,19 +7,31 @@ import { Component } from '@angular/core';
   templateUrl: '/HomePage.html', 
   styleUrls: ['./app.component.css']
 })
+
+
+
 export class AppComponent {
   title = 'schedule-app';
   name = 'No'
-
-  titleSwitch() {
-     
-    if (this.title == 'schedule-app') {
-      this.title = "YO"
-      console.log(this.title, "IF YO")
+  ngOnInit() {
+    document.getElementById('loginBoxHidden').classList.replace('hidden', 'notHidden')
+  }
+  
+  
+  titleSwitch(loginV) {
+   loginV = document.getElementById('loginBoxHidden').classList.contains
+    
+    if (document.getElementById('loginBoxHidden').classList.contains('notHidden')) {
+      document.getElementById('loginBoxHidden').classList.replace('notHidden', 'hidden')
+      document.getElementById('mainPage').classList.replace('hidden', 'notHidden')
+      console.log(loginV, "IF YO")
   } else {
-    this.title = 'schedule-app'
-    console.log(this.title, "else YO")
+    document.getElementById('loginBoxHidden').classList.replace('hidden', 'notHidden')
+    document.getElementById('mainPage').classList.replace('notHidden', 'hidden')
+    
+    console.log(loginV, "else YO")
   }   
+  
   
 }
 
