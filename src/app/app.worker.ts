@@ -12,8 +12,9 @@ export class Worker {
     constructor(
        /* private userName: string,
         private password: string,
-        public possition: string,
-        public name: string,*/
+       public possition: string,
+        public name: string,
+        public companyName: string,*/
         public assignedHours: number,
         public workingHours: number,
         public startingHour: number,

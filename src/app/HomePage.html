@@ -15,21 +15,21 @@
                   <span class="input-group-text" id="Userlogin" style="border-color: #9ac2e8" >Username</span>
                   <br>
                 </div>
-                <input type="text" class="form-control" style="border-color: #9ac2e8"  aria-label="Username" aria-describedby="basic-addon1">
+                <input id="UserText" type="text" class="form-control" style="border-color: #9ac2e8"  aria-label="Username" aria-describedby="basic-addon1">
                 <div class="input-group mb-3" style="margin-top: 1rem;">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="PasswordLogin" style="border-color: #9ac2e8; width: 97px"  >Password </span>
                   </div>
-                  <input type="text" class="form-control" style="border-color: #9ac2e8"  aria-label="Username" aria-describedby="basic-addon1">
+                  <input id="PasswordText" type="text" class="form-control" style="border-color: #9ac2e8"  aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="CompanyLogin" style="border-color: #9ac2e8" >Company Name</span>
                   </div>
-                  <input type="text" class="form-control" style="border-color: #9ac2e8" aria-label="Username" aria-describedby="basic-addon1">
+                  <input id="CompanyText" type="text" class="form-control" style="border-color: #9ac2e8" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="btn-group" role="group" aria-label="Basic example" style="margin: auto" >
-                  <button type="button" (click)="titleSwitch(loginV)"  class="btn btn-outline-primary" style="margin: auto" >Sign In</button>
+                  <button type="button" (click)="titleSwitch(loginV)" (click)="logininfohandler(UserName,Passwordtext,Company)" class="btn btn-outline-primary" style="margin: auto" >Sign In</button>
                   <br><button type="button" class="btn btn-outline-primary" style="margin: auto" >Forgot Password?</button>
                   <button type="button" class="btn btn-outline-primary" style="margin: auto" style="margin-left: auto;margin-right: auto;margin-top: auto;" >Sign Up</button>
                 </div>
@@ -43,7 +43,7 @@
     </div>
     
     <main class="hidden" id="mainPage" role="main">
-
+      <h2>{{wusername}}{{ wpassword}}{{wcompany}}</h2>
       <router-outlet></router-outlet>
       
       <div style="margin-top: 15px;" class="container marketing">

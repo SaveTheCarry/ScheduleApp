@@ -19,7 +19,7 @@ export class TodaysPLan {
   WorkAres = ["Kitchen", "Bowl", "restaurant"]
   
   Kitchen = [
-    new Worker(45,0,24, 6, '0',),
+    new Worker(45,0,24, 6, '0'),
     new Worker(84,8, 14 ,4, '0', ), 
   ];
 
