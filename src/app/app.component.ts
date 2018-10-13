@@ -11,13 +11,24 @@ import { Worker } from './app.worker';
 
 
 export class AppComponent {
-  title = 'schedule-app';
-  name = 'No';
+  
   wusername: string;
   wpassword: string;
   wcompany: string;
+  usersignedin: boolean = true; /*Change this to false if you want to work on sign in page (true). We need to save this value*/
+
+
+
+
+
+
   ngOnInit() {
     document.getElementById('loginBoxHidden').classList.replace('hidden', 'notHidden')
+    if(this.usersignedin == true) {
+      document.getElementById('loginBoxHidden').classList.replace('notHidden', 'hidden');
+      document.getElementById('mainPage').classList.replace('hidden', 'notHidden');
+    }
+
   }
 
 logininfohandler(UserName,Passwordtext,Company){
@@ -27,6 +38,15 @@ logininfohandler(UserName,Passwordtext,Company){
   this.wusername= UserName
   this.wpassword= Passwordtext
   this.wcompany= Company
+}
+
+signout(){
+  this.usersignedin = false
+  console.log("TEST YO")
+}
+
+signin(){
+  this.usersignedin = true
 }
 
   

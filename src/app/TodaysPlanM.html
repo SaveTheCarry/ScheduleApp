@@ -1,7 +1,3 @@
-
-
-
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -19,27 +15,15 @@
   <body>
     <main role="main">
       <div style="margin-top: 20px" class="container marketing">
-        <div class="row ">
-            <div style="margin-bottom: 10px" class="col-sm">
-                <h1 class="featurette-heading">Your Next Shift:</h1>
-                <h2>{{demoNextShift}}</h2>
-                <hr class="featurette-divider">
-            </div>
-            
-          <div class="col">
+        <div class="row featurette">
+          <div class="col-md-7">
             <h1 class="featurette-heading">{{currentMonth}}/{{currentDay}} Daily Schedule</h1>
-            <h2 style="margin-top: 0%" class="featurette-heading">kitchen</h2>
+            <h2 style="margin-top: 0%" class="featurette-heading">{{WorkAres[0]}}</h2>
             <ul>
-              <li class="todaysplanlist" *ngFor="let Worker of kitchen">{{Worker.name}}, {{Worker.possition}}: {{Worker.startingHourDisplay}}-{{Worker.endingHourDisplay}} </li>
-            </ul>
-            <h2 style="margin-top: 0%" class="featurette-heading">Snack Bar</h2>
-            <ul>
-              <li class="todaysplanlist" *ngFor="let Worker of snackBar">{{Worker.name}}, {{Worker.possition}}: {{Worker.startingHourDisplay}}-{{Worker.endingHourDisplay}} </li>
+              <li *ngFor="let Worker of Kitchen">{{Worker.name}}: {{Worker.startingHour}}-{{Worker.EndingHour}}</li>
             </ul>
           </div>
-          
         </div>
-        
       </div>
     </main>
   
@@ -50,5 +34,3 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   
 </html>
-
-

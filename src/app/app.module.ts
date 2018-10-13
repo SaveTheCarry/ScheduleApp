@@ -6,6 +6,7 @@ import { TodaysPLan } from "./app.TodaysPlan";
 import { availability } from "./app.availability";
 import { ContactManager } from "./app.ContactManager";
 import { Worker } from './app.worker';
+import { Profile } from './app.profile';;
 
 
 
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
   { path: 'availability.html', component: availability },
   { path: 'ContactManager.html', component: ContactManager },
   { path: 'TodaysPlan.html', component: TodaysPLan },
+  { path: 'Profile.html', component: Profile },
   { path: '**', component: AppComponent }
 
 ];
@@ -25,6 +27,7 @@ const appRoutes: Routes = [
     ContactManager,
     availability,
     Worker,
+    Profile,
 
   ],
   imports: [

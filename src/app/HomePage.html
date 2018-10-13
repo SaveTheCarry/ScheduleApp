@@ -3,7 +3,7 @@
 
 
 <html lang="en">
-  <body style="background-color: gainsboro">
+  <body style="background-image: url('src/assets/Images/Office.png')">
     <div id="loginBoxHidden" class="hidden">
       <div id="loginContainer"    class="container">
         <div class="row">
@@ -42,35 +42,37 @@
       
     </div>
     
-    <main class="hidden" id="mainPage" role="main">
+    <main class="hidden " id="mainPage" role="main">
       <h2>{{wusername}}{{ wpassword}}{{wcompany}}</h2>
       <router-outlet></router-outlet>
       
-      <div style="margin-top: 15px;" class="container marketing">
+      <div id="mainButtons" style="margin-top: 15px;" class="container marketing">
 
        
         <div class="row">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Contact Manager</h2>
+            <img  src="https://static.thenounproject.com/png/680429-200.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Messages</h2>
             
             <p><a class="btn btn-secondary"  routerLink="/ContactManager.html"  role="button">View details »</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Change Availability Times</h2>
+            <img  src="https://static.thenounproject.com/png/405170-200.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Profile</h2>
             
-            <p><a class="btn btn-secondary"  routerLink="/availability.html"  role="button">View details »</a></p>
+            <p><a class="btn btn-secondary"  routerLink="/Profile.html"  role="button">View details »</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <img  src="https://static.thenounproject.com/png/384040-200.png" alt="Generic placeholder image" width="140" height="140">
             <h2>Schedule</h2>
             
             <p><a class="btn btn-secondary"  routerLink="/TodaysPlan.html"  role="button">View details »</a></p>
           </div>
+          <button style="margin:auto" (click)="titleSwitch(loginV)" (click)="signout()" class="btn btn-outline-success my-2 my-sm-0">sign Out</button>
         </div>
+        
       </div>
-      <button (click)="titleSwitch(loginV)" class="btn btn-outline-success my-2 my-sm-0">Back to Log In</button>
+      
     </main>
 
    
